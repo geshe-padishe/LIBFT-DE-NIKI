@@ -44,9 +44,9 @@ int main(int argc, char **argv)
 	char *ptr3 = &str3[j];
 
 	size = strlcpy(ptr, ptr2, atoi(argv[3]));
-	size = ft_strlcpy(ptr1, ptr3, atoi(argv[3]));
+	size2 = ft_strlcpy(ptr1, ptr3, atoi(argv[3]));
 	printf("real => first char is %c\n", *ptr2);
 	printf("meme => first char is %c\n", *ptr3);
 	printf("real => %s and size was %d\n", str, size);
-	printf("meme => %s and size was %d\n", str1, size);
+	printf("meme => %s and size was %d\n", str1, size2);
 }
