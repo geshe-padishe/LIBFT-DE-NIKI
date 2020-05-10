@@ -14,7 +14,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
 
-
+/*
 int	main(int argc, char **argv)
 {
 	char str[] = "reawe34024356";
@@ -41,3 +41,4 @@ int	main(int argc, char **argv)
 		printf("success");
 	printf("failure");
 }
+*/

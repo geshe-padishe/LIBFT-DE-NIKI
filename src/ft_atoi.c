@@ -4,13 +4,9 @@
 
 int ft_atoi(const char* nstr)
 {
-	unsigned long long nbr;
-	unsigned long long wall;
-	unsigned long long n_wall;
+	long int nbr;
 	int sign;
 
-	wall = 9223372036854775807;
-	n_wall = 9223372036854775808;
 	sign = 1;
 	nbr = 0;
 	while ((*nstr > 8 && *nstr < 14) || *nstr == 32 || *nstr == '+')
@@ -28,13 +24,10 @@ int ft_atoi(const char* nstr)
 		}
 	else
 		return (0);
-	if (nbr > wall && sign == 1)
-		return (-1);
-	if (nbr < n_wall && sign == -1)
-		return (0);
 	return (nbr * sign);
 }
 
+/*
 int main(int argc, char **argv)
 {
 	char *str = argv[1];
@@ -43,3 +36,4 @@ int main(int argc, char **argv)
 	printf("real => %d\n", atoi(str));
 	printf("--------\n");
 }
+*/
