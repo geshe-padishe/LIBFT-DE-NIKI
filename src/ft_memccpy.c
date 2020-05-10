@@ -7,8 +7,8 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 	char *ptr_dest = dest;
 	const char *ptr_src = src;
 	int i;
-	char ch;
-	
+
+	i = 0;	
 	while (n > 0)
 	{
 		ptr_dest[i] = ptr_src[i];
@@ -35,3 +35,4 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 	printf("mine => %s => %s\n", ft_memccpy(ptr_dest, ptr_src, ch, 21), dest);
 	printf("real => %s => %s", memccpy(ptr2_dest, ptr_src, ch, 21), dest1);
 }
+*/

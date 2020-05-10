@@ -6,9 +6,9 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char		*ptr_dest;
-	const char	*ptr_src = src;
+	const char	*ptr_src;
 
-	ptr_test = dest;
+	ptr_dest = dest;
 	ptr_src = src;
 	if (dest == NULL || src == NULL)
 		return (NULL); 
