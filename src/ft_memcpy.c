@@ -3,11 +3,15 @@
 #include <string.h>
 #include <stdlib.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char *ptr_dest = dest;
-	const char *ptr_src = src;
+	char		*ptr_dest;
+	const char	*ptr_src = src;
 
+	ptr_test = dest;
+	ptr_src = src;
+	if (dest == NULL || src == NULL)
+		return (NULL); 
 	while (n-- > 0)
 		*ptr_dest++ = *ptr_src++;
 	return (dest);
@@ -25,7 +29,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 //	void *ptr3 = &string3;
 //	int i = atoi(argv[1]);
 //
-//	ft_memcpy(ptr, ptr2, i);
+//	ft_memcpy((void*)0, (void*)0, i);
 //	memcpy(ptr1, ptr3, i);
 //	printf("me => %s\n", string);
 //	printf("real => %s", string1);
