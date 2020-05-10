@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <bsd/string.h>
 
 size_t ft_strlen2(char *str)
 {
