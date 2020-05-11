@@ -57,5 +57,5 @@ char *ft_itoa(int n)
 //{
 //	int i = (atoi(argv[1]));
 //
-	printf("%s\n", ft_itoa(i));	
-}
+//	printf("%s\n", ft_itoa(i));	
+//}
