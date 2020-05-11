@@ -36,7 +36,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 	size_t len;
 
 	len = ft_strlen5(s1) + ft_strlen5(s2);
-	str = malloc(len + 1);
+	if ((str = malloc(len + 1)) = NULL)
+		return (NULL);
 	ft_mycopy(str, s1, s2);
 	return (str);
 }

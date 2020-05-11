@@ -1,4 +1,3 @@
-#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -31,7 +30,8 @@ char *ft_itoa(int n)
 	size = 0;
 	nb_c = n;
 	size = find_size(nb_c);
-	str = malloc(size + 1);
+	if ((str = malloc(size + 1)) == NULL)
+		return (NULL);
 	if (nb_c < 0)
 	{
 		str[i] = '-';
@@ -45,6 +45,7 @@ char *ft_itoa(int n)
 		nb_c = nb_c / 10;
 		i++;
 	}
+	str[size] = '\0';
 	return (str);
 }
 
