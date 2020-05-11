@@ -38,7 +38,11 @@ char *ft_itoa(int n)
 		nb_c = nb_c * -1;
 	}
 	if (n == 0)
+	{
 		str[0] = '0';
+		str[1] = '\0';
+		return (str);
+	}
 	while (nb_c >= 1)
 	{
 		str[size - i - 1] = (nb_c % 10) + 48;
@@ -53,5 +57,5 @@ char *ft_itoa(int n)
 //{
 //	int i = (atoi(argv[1]));
 //
-//	printf("%s\n", ft_itoa(i));	
-//}
+	printf("%s\n", ft_itoa(i));	
+}
