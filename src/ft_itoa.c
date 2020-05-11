@@ -6,6 +6,8 @@ int find_size(long nb_c)
 	int size;
 
 	size = 0;
+	if (nb_c = 0)
+		return (1);
 	if (nb_c < 0)
 	{
 		nb_c = nb_c * -1;
