@@ -1,4 +1,4 @@
-#include "libft.h"
+//#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -62,7 +62,7 @@ char	**ft_split(char	const *s, char c)
 		}
 		i++;
 	}
-	if ((td_str = malloc(cnt + 1)) == NULL)
+	if ((td_str = malloc(sizeof(char*) * (cnt + 1))) == NULL)
 		return (NULL);
 	if ((td_str = ft_dd_strdup(s, td_str, c)) == NULL)
 		return (NULL);
@@ -75,7 +75,8 @@ char	**ft_split(char	const *s, char c)
 //int main(int argc, char **argv)
 //{
 //	int i = 0;
-//	char **dd_str = ft_split(argv[1], argv[2][0]);
+//	char *s = "split  ||this|for|me|||||!|";
+//	char **dd_str = ft_split(s, argv[2][0]);
 //
 //	while (dd_str[i] != NULL)
 //	{
