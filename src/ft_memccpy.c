@@ -2,13 +2,15 @@
 #include <string.h>
 #include <stdio.h>
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char *ptr_dest = dest;
-	const char *ptr_src = src;
-	int i;
+	char		*ptr_dest;
+	const char	*ptr_src;
+	int			i;
 
-	i = 0;	
+	ptr_dest = dest;
+	ptr_src = src;
+	i = 0;
 	while (n > 0)
 	{
 		ptr_dest[i] = ptr_src[i];
@@ -19,20 +21,20 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*int main(int argc, char **argv)
-{
-	argc = 2;
-	char dest[] = "01234567896666666666666666666";
-	char dest1[] = "01234567896666666666666666666";
-	char src[] = "string with \200 inside";
-	void *ptr_dest = dest;
-	void *ptr2_dest = NULL;
-	void *ptr_src = src;
-	char ch = argv[1][0];
-
-	src[13] = ch;
-	printf("mine => %s => %s\n", ft_memccpy(ptr_dest, ptr_src, ch, 21), dest);
-	printf("real => %s => %s", memccpy(ptr2_dest, ptr_src, ch, 21), dest1);
-}
+/*
+**int main(int argc, char **argv)
+**{
+**	argc = 2;
+**	char dest[] = "01234567896666666666666666666";
+**	char dest1[] = "01234567896666666666666666666";
+**	char src[] = "string with \200 inside";
+**	void *ptr_dest = dest;
+**	void *ptr2_dest = NULL;
+**	void *ptr_src = src;
+**	char ch = argv[1][0];
+**
+**	src[13] = ch;
+**	printf("mine => %s => %s\n", ft_memccpy(ptr_dest, ptr_src, ch, 21), dest);
+**	printf("real => %s => %s", memccpy(ptr2_dest, ptr_src, ch, 21), dest1);
+**}
 */

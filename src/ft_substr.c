@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	size_t i;
-	size_t j;
+	char	*str;
+	size_t	i;
+	size_t	j;
 
 	j = 0;
 	i = start;
@@ -24,10 +24,11 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	str[j] = '\0';
 	return (str);
 }
-
-//int main(int argc, char **argv)
-//{
-//	//DANGER LA STRING DE BASE PEUT NE PAS AVOIR DE CHARACTER A LINDEX START
-//	(void)argc;
-//	printf("%s\n", ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
-//}
+/*
+**int main(int argc, char **argv)
+**{
+**	//DANGER LA STRING DE BASE PEUT NE PAS AVOIR DE CHARACTER A LINDEX START
+**	(void)argc;
+**	printf("%s\n", ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
+**}
+*/

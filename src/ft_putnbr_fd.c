@@ -1,15 +1,15 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-static void ft_putchar_nbr_fd(char c, int fd)
+static void	ft_putchar_nbr_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
 
-void ft_putnbr_fd(int n, int fd)
+void		ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
-		write (fd, "-2147483648", 11);
+		write(fd, "-2147483648", 11);
 	else
 	{
 		if (n < 0)
@@ -24,9 +24,9 @@ void ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
-
-//int main(int argc, char **argv)
-//{
-//	ft_putnbr_fd(atoi(argv[1]), 1);
-//
-//}
+/*
+**int main(int argc, char **argv)
+**{
+**	ft_putnbr_fd(atoi(argv[1]), atoi(argv[2]));
+**}
+*/

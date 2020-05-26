@@ -1,4 +1,3 @@
-//#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,6 +10,12 @@ size_t	ft_strlen4(const char *s, char c)
 	while (s[i] && s[i] != c)
 		i++;
 	return (i);
+}
+
+void	bag(size_t *index, size_t *i)
+{
+	*i = *i + *index - 1;
+	*index = 0;
 }
 
 void	*ft_dd_strdup(const char *s, char **td_str, char c)
@@ -35,8 +40,7 @@ void	*ft_dd_strdup(const char *s, char **td_str, char c)
 			}
 			td_str[j][index] = '\0';
 			j++;
-			i = i + index - 1;
-			index = 0;
+			bag(&index, &i);
 		}
 		i++;
 	}
@@ -66,21 +70,21 @@ char	**ft_split(char	const *s, char c)
 		return (NULL);
 	if ((td_str = ft_dd_strdup(s, td_str, c)) == NULL)
 		return (NULL);
-	printf("%zu\n", cnt);
 	td_str[cnt] = NULL;
 	return (td_str);
 }
-
-
-//int main(int argc, char **argv)
-//{
-//	int i = 0;
-//	char *s = "split  ||this|for|me|||||!|";
-//	char **dd_str = ft_split(s, argv[2][0]);
-//
-//	while (dd_str[i] != NULL)
-//	{
-//		printf("%s\n", dd_str[i]);
-//		i++;
-//	}
-//}
+/*
+**int main(int argc, char **argv)
+**{
+**	int i = 0;
+**	char *s = argv[1];
+**	//char *s = "split  ||this|for|me|||||!|";
+**	char **dd_str = ft_split(s, argv[2][0]);
+**
+**	while (dd_str[i] != NULL)
+**	{
+**		printf("%s\n", dd_str[i]);
+**		i++;
+**	}
+**}
+*/

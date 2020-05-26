@@ -25,26 +25,26 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
-int main(int argc, char **argv)
-{
-	int i;
-	int j;
-	char string[15] = "012345678";
-	char string1[15] = "012345678";
-	char string2[10] = "grxgrxgrx";
-	char string3[10] = "grxgrxgrx";
-	i = atoi(argv[1]);
-	j = atoi(argv[2]);
-	void *ptr = &string[i];
-	void *ptr2 = &string[j];
-	void *ptr1 = &string1[i];
-	void *ptr3 = &string1[j];
-
-	memmove(((void *)0), ((void *)0), 4);
-	ft_memmove(((void *)0), ((void *)0), 4);
-	printf("real => %s\n", string);
-	printf("me => %s\n", string1);
-	printf("diff = %d", strcmp(string, string1));
-
-}
+**int main(int argc, char **argv)
+**{
+**	int i;
+**	int j;
+**	char string[15] = "012345678";
+**	char string1[15] = "012345678";
+**	char string2[10] = "grxgrxgrx";
+**	char string3[10] = "grxgrxgrx";
+**	i = atoi(argv[1]);
+**	j = atoi(argv[2]);
+**	void *ptr = &string[i];
+**	void *ptr2 = &string[j];
+**	void *ptr1 = &string1[i];
+**	void *ptr3 = &string1[j];
+**
+**	memmove(((void *)0), ((void *)0), 4);
+**	ft_memmove(((void *)0), ((void *)0), 4);
+**	printf("real => %s\n", string);
+**	printf("me => %s\n", string1);
+**	printf("diff = %d", strcmp(string, string1));
+**
+**}
 */

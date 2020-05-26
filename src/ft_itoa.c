@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int find_size(long nb_c)
+int		find_size(long nb_c)
 {
 	int size;
 
@@ -21,22 +21,14 @@ int find_size(long nb_c)
 	return (size);
 }
 
-char *ft_itoa(int n)
+char	*bazooka(char *str, long nb_c, int size, int n)
 {
-	char *str;
-	long nb_c;
-	int size;
-	int i;
+	int	i;
 
 	i = 0;
-	size = 0;
-	nb_c = n;
-	size = find_size(nb_c);
-	if ((str = malloc(size + 1)) == NULL)
-		return (NULL);
 	if (nb_c < 0)
 	{
-		str[i] = '-';
+		str[0] = '-';
 		nb_c = nb_c * -1;
 	}
 	if (n == 0)
@@ -55,9 +47,26 @@ char *ft_itoa(int n)
 	return (str);
 }
 
-//int main(int argc, char **argv)
-//{
-//	int i = (atoi(argv[1]));
-//
-//	printf("%s\n", ft_itoa(i));	
-//}
+char	*ft_itoa(int n)
+{
+	char	*str;
+	long	nb_c;
+	int		size;
+	int		i;
+
+	i = 0;
+	size = 0;
+	nb_c = n;
+	size = find_size(nb_c);
+	if ((str = malloc(size + 1)) == NULL)
+		return (NULL);
+	return (bazooka(str, nb_c, size, n));
+}
+/*
+**int main(int argc, char **argv)
+**{
+**	int i = (atoi(argv[1]));
+**
+**	printf("%s\n", ft_itoa(i));
+**}
+*/

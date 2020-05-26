@@ -4,9 +4,9 @@
 static int	ft_strlen_mapi(const char *s)
 {
 	int i;
-	
+
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	return (i);
 }
@@ -20,9 +20,9 @@ char		add_one_to_char(unsigned int i, char ch)
 
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *str;
-	size_t len;
-	unsigned int i;
+	char			*str;
+	size_t			len;
+	unsigned int	i;
 
 	i = 0;
 	len = ft_strlen_mapi(s);
@@ -36,10 +36,11 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-//int main(int argc, char **argv)
-//{
-//	argc = 2;
-//	argc++;
-//	printf("%s\n", ft_strmapi(argv[1], add_one_to_char));
-//}
+/*
+**int main(int argc, char **argv)
+**{
+**	argc = 2;
+**	argc++;
+**	printf("%s\n", ft_strmapi(argv[1], add_one_to_char));
+**}
+*/

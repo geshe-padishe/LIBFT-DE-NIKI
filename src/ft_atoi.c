@@ -50,11 +50,12 @@ int						ft_atoi(const char *nstr)
 		return (0);
 	return (nbr * sign);
 }
-
 /*
 **int main(int argc, char **argv)
 **{
 **	char *str = argv[1];
+**
+**	argc = 0;
 **	printf("meme => %d\n", ft_atoi(str));
 **	printf("real => %d\n", atoi(str));
 **	printf("--------\n");
