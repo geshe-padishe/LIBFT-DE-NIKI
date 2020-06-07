@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:38:53 by user42            #+#    #+#             */
-/*   Updated: 2020/05/28 18:40:39 by user42           ###   ########.fr       */
+/*   Updated: 2020/06/07 22:33:50 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,15 @@ int						gooba2(int sign)
 	return (0);
 }
 
+int						ft_atoi_sign(const char *nstr)
+{
+	if (nstr[0] == '-')
+		return (-1);
+	if (nstr[0] == '+')
+		return (1);
+	return (0);
+}
+
 int						ft_atoi(const char *nstr)
 {
 	unsigned long long int	nbr;
@@ -43,13 +52,12 @@ int						ft_atoi(const char *nstr)
 
 	sign = 1;
 	nbr = 0;
-	while ((*nstr > 8 && *nstr < 14) || *nstr == 32 || *nstr == '+')
+	while ((*nstr > 8 && *nstr < 14) || *nstr == 32)
 		nstr++;
-	if (*nstr == '-')
-	{
-		sign = -1;
+	if ((sign = ft_atoi_sign(nstr)))
 		nstr++;
-	}
+	else
+		sign = 1;
 	if ((*nstr >= '0' && *nstr <= '9'))
 		while (*nstr >= '0' && *nstr <= '9')
 		{
