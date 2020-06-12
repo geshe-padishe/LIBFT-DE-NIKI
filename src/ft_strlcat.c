@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:42:39 by user42            #+#    #+#             */
-/*   Updated: 2020/06/07 22:55:01 by user42           ###   ########.fr       */
+/*   Updated: 2020/06/12 15:46:03 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "bsd/string.h"
 
 size_t	ft_strlen2(char *str)
 {

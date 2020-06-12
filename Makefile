@@ -36,4 +36,4 @@ fclean: clean
 re: fclean all
 
 $(SRC_DIR)%.o: $(SRC_DIR)%.c $(INC)
-	$(CC) -I$(INC_DIR) $(CFLAGS) -c $< -o $@ 
+	$(CC) -I$(INC_DIR) $(CFLAGS) -c $< -o $@

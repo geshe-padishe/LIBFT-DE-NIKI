@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:43:04 by user42            #+#    #+#             */
-/*   Updated: 2020/05/28 18:43:06 by user42           ###   ########.fr       */
+/*   Updated: 2020/06/12 15:42:32 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,6 @@ static int	ft_strlen_mapi(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
-
-char		add_one_to_char(unsigned int i, char ch)
-{
-	i = 0;
-	i++;
-	return (ch + 1);
 }
 
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
