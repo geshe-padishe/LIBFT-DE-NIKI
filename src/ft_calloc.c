@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:40:59 by user42            #+#    #+#             */
-/*   Updated: 2020/05/28 18:41:03 by user42           ###   ########.fr       */
+/*   Updated: 2020/06/12 21:15:59 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,35 +24,29 @@ void	*ft_calloc(size_t nbelm, size_t size)
 	if ((ptr = malloc(nbelm * size)) == NULL)
 		return (NULL);
 	str = ptr;
-	if (nbelm == 0)
-		str[i] = 0;
-	while (i < nbelm)
-		str[i++] = 0;
+	if (nbelm == 0 || size == 0)
+		str[0] = 0;
+	if (size != 0 && nbelm != 0)	
+		while (i < nbelm)
+			str[i++] = 0;
 	return (ptr);
 }
 /*
 **int main(int argc, char **argv)
 **{
 **	int size = 0;
-**	void * d1 = ft_calloc(size, sizeof(int));
-**	void * d2 = calloc(size, sizeof(int));
-**
-**	if (memcmp(d1, d2, size * sizeof(int)))
-**		printf("failed");
-**	free(d1);
-**	free(d2);
-**	printf("success");
 **	char *ptr;
 **	char *ptr2;
+**
 **	argc = 2;
 **	ptr = (char*)calloc(atoi(argv[1]), atoi(argv[2]));
 **	ptr2 = (char*)ft_calloc(atoi(argv[1]), atoi(argv[2]));
-**
-**	ptr[0] = 'W';
-**	ptr2[0] = 'W';
-**
+**	//ptr[0] = 'W';
+**	//ptr2[0] = 'W';
 **
 **	printf("real => %s\n", ptr);
 **	printf("meme => %s\n", ptr2);
+**	free(ptr);
+**	free(ptr2);
 **}
 */
