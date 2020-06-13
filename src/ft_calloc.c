@@ -6,13 +6,15 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:40:59 by user42            #+#    #+#             */
-/*   Updated: 2020/06/12 21:15:59 by user42           ###   ########.fr       */
+/*   Updated: 2020/06/13 18:27:44 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <assert.h>
 
 void	*ft_calloc(size_t nbelm, size_t size)
 {
@@ -26,27 +28,41 @@ void	*ft_calloc(size_t nbelm, size_t size)
 	str = ptr;
 	if (nbelm == 0 || size == 0)
 		str[0] = 0;
-	if (size != 0 && nbelm != 0)	
-		while (i < nbelm)
-			str[i++] = 0;
+	else 
+		ft_bzero(str, nbelm * size);
 	return (ptr);
 }
-/*
-**int main(int argc, char **argv)
-**{
-**	int size = 0;
-**	char *ptr;
-**	char *ptr2;
-**
-**	argc = 2;
-**	ptr = (char*)calloc(atoi(argv[1]), atoi(argv[2]));
-**	ptr2 = (char*)ft_calloc(atoi(argv[1]), atoi(argv[2]));
-**	//ptr[0] = 'W';
-**	//ptr2[0] = 'W';
-**
-**	printf("real => %s\n", ptr);
-**	printf("meme => %s\n", ptr2);
-**	free(ptr);
-**	free(ptr2);
-**}
-*/
+//
+//int main()
+//{
+//	int size = 0;
+//	int i = 0;
+//	int j = 0;
+//	char *ptr;
+//	char *ptr2;
+//
+//	while (i < 100)
+//	{
+//		while (j < 100)
+//		{
+//			ptr = (char*)calloc(i, j);
+//			ptr2 = (char*)ft_calloc(i, j);
+//			assert(ptr && ptr2);
+//			if (memcmp(ptr, ptr2, i * j))
+//			{
+//				printf("fail");
+//				printf("\ni = %d, j = %d\n", i, j);
+//			}
+//			else
+//			{
+//				//printf("success");
+//				//printf("\ni = %d, j = %d\n", i, j);
+//			}
+//			j++;
+//			free(ptr);
+//			free(ptr2);
+//		}
+//		j = 0;
+//		i++;
+//	}
+//}
