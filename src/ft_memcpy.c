@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:42:04 by user42            #+#    #+#             */
-/*   Updated: 2020/05/28 18:42:04 by user42           ###   ########.fr       */
+/*   Updated: 2020/06/17 18:49:45 by ngenadie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	ptr_dest = dest;
 	ptr_src = src;
-	if (dest == NULL || src == NULL)
+	if (dest == NULL && src == NULL)
 		return (NULL);
 	while (n-- > 0)
 		*ptr_dest++ = *ptr_src++;
