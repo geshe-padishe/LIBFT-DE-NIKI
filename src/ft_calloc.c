@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:40:59 by user42            #+#    #+#             */
-/*   Updated: 2020/06/17 17:23:45 by ngenadie         ###   ########.fr       */
+/*   Updated: 2020/06/17 17:37:15 by ngenadie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ void	*ft_calloc(size_t nbelm, size_t size)
 	str = ptr;
 	if (nbelm == 0 || size == 0)
 		str[0] = 0;
-	else 
+	else
 		ft_bzero(str, nbelm * size);
 	return (ptr);
 }
-/**
+/*
 **int main()
 **{
 **	int size = 0;
