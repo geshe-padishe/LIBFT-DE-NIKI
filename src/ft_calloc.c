@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:40:59 by user42            #+#    #+#             */
-/*   Updated: 2020/06/17 17:37:15 by ngenadie         ###   ########.fr       */
+/*   Updated: 2020/06/17 18:00:41 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@
 
 void	*ft_calloc(size_t nbelm, size_t size)
 {
-	size_t	i;
 	void	*ptr;
 	char	*str;
 
-	i = 0;
 	if ((ptr = malloc(nbelm * size)) == NULL)
 		return (NULL);
 	str = ptr;
