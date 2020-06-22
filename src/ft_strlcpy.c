@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:42:45 by user42            #+#    #+#             */
-/*   Updated: 2020/06/20 21:01:17 by user42           ###   ########.fr       */
+/*   Updated: 2020/06/22 19:49:37 by ngenadie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <bsd/string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
