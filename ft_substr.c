@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:43:38 by user42            #+#    #+#             */
-/*   Updated: 2020/05/28 18:43:39 by user42           ###   ########.fr       */
+/*   Updated: 2020/07/08 17:55:30 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = malloc(i - start + 1);
 	if (str == NULL)
 		return (NULL);
-	while (i - start - j > 0)
+	if (start > ft_strlen(s))
+	{
+		str[0] = 0;
+		return (str);
+	}
+	while (i - start - j > 0 && s[start + j])
 	{
 		str[j] = s[start + j];
 		j++;

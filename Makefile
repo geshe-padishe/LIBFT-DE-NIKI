@@ -12,15 +12,7 @@ ft_putendl_fd.c ft_putnbr_fd.c ft_putchar_fd.c ft_putstr_fd.c
 
 INC_H = libft.h
 
-SRC_DIR = src/
-
-INC_DIR = inc/
-
-SRC = $(addprefix $(SRC_DIR), $(SRC_C))
-
-INC = $(addprefix $(INC_DIR), $(INC_H))
-
-OBJS = $(SRC:.c=.o)
+OBJS = $(SRC_C:.c=.o)
 	
 all: $(NAME)
 
@@ -35,5 +27,5 @@ fclean: clean
 
 re: fclean all
 
-$(SRC_DIR)%.o: $(SRC_DIR)%.c $(INC)
-	$(CC) -I$(INC_DIR) $(CFLAGS) -c $< -o $@
+$%.o: $%.c $(INC_H)
+	$(CC) $(CFLAGS) -c $< -o $@
