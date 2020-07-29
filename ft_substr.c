@@ -6,7 +6,7 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:43:38 by user42            #+#    #+#             */
-/*   Updated: 2020/07/08 17:55:30 by user42           ###   ########.fr       */
+/*   Updated: 2020/07/29 19:40:58 by ngenadie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 **{
 **	//DANGER LA STRING DE BASE PEUT NE PAS AVOIR DE CHARACTER A LINDEX START
 **	(void)argc;
-**	printf("%s\n", ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
+**	char *ptr;
+**	char *ptr2;
+**
+**	printf("%s\n", ptr = ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
 **}
 */
