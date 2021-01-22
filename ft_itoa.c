@@ -6,14 +6,14 @@
 /*   By: user42 <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/28 18:41:45 by user42            #+#    #+#             */
-/*   Updated: 2020/06/01 01:25:04 by user42           ###   ########.fr       */
+/*   Updated: 2021/01/22 00:06:13 by nikotikch        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int		find_size(long nb_c)
+int		find_size(long long nb_c)
 {
 	int size;
 
@@ -33,7 +33,7 @@ int		find_size(long nb_c)
 	return (size);
 }
 
-char	*bazooka(char *str, long nb_c, int size, int n)
+char	*bazooka(char *str,long long nb_c, int size, int n)
 {
 	int	i;
 
@@ -59,11 +59,11 @@ char	*bazooka(char *str, long nb_c, int size, int n)
 	return (str);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long long n)
 {
-	char	*str;
-	long	nb_c;
-	int		size;
+	char		*str;
+	long long	nb_c;
+	int			size;
 
 	size = 0;
 	nb_c = n;
